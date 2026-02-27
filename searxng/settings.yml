@@ -1,0 +1,54 @@
+use_default_settings:
+  # Kế thừa toàn bộ cấu hình mặc định, chỉ override một số mục bên dưới
+  engines:
+    keep_only:
+      - google
+      - bing
+      - duckduckgo
+      - wikipedia
+      - github
+
+general:
+  instance_name: "Company SearXNG"
+  debug: false
+
+server:
+  port: 8080
+  bind_address: "0.0.0.0"
+  secret_key: "change_this_to_a_secure_random_value_5f8b3c7a9e2412c1"
+
+redis:
+  url: "redis://redis:6379/0"
+
+ui:
+  default_locale: "en"
+  theme_args:
+    # Có thể chỉnh lại sau cho branding
+    simple_style: "auto"
+
+search:
+  autocomplete: "google"
+  safe_search: 0
+  formats:
+    - "html"
+    - "json"
+    - "csv"
+    - "rss"
+
+engines:
+  - name: "google"
+    shortcut: "g"
+    disabled: false
+  - name: "bing"
+    shortcut: "bi"
+    disabled: false
+  - name: "duckduckgo"
+    shortcut: "ddg"
+    disabled: false
+  - name: "wikipedia"
+    shortcut: "w"
+    disabled: false
+  - name: "github"
+    shortcut: "gh"
+    disabled: false
+
